@@ -9,12 +9,9 @@
  * Main module of the application.
  */
 var app = angular
-  .module('Landing', ['ui.router', 'ng-token-auth']);
+  .module('Landing', ['ui.router']);
 
-app.config(function($stateProvider, $urlRouterProvider, $authProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
 
-  $authProvider.configure({
-            apiUrl: ''
-  });
 
 });

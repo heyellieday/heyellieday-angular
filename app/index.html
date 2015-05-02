@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" ng-app="Landing">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Ellie Day - Coder. Maker. Very Cool.</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -13,11 +13,11 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <script src="//use.typekit.net/fgj1nny.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+        <!-- <script src="//use.typekit.net/fgj1nny.js"></script> -->
+ <!--  <script>try{Typekit.load();}catch(e){}</script> -->
   </head>
   <body ng-controller="AppCtrl">
   <!-- Navigation -->
@@ -31,7 +31,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top"><img height="60px" width="auto" class="responsive" src="images/logo.png"></a>
+                <a class="navbar-brand" href="#page-top">
+                    <img width="auto" height="50px" class="" src="images/logo.png">
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,15 +42,18 @@
                     <li class="hidden">
                         <a href="#page-top" target="_self" ></a>
                     </li>
-                    <li class="page-scroll" target="_self" >
-                        <a href="#portfolio">Work</a>
+                    <li class="page-scroll" >
+                        <a href="#portfolio" target="_self">What I do</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about" target="_self" >About</a>
+                        <a href="#about" target="_self" >My Mission</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact" target="_self" >Contact</a>
+                        <a href="#posts"  >Latest Posts</a>
                     </li>
+<!--                     <li class="page-scroll">
+                        <a href="#contact" target="_self" >Let's Chat!</a>
+                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -60,18 +65,17 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <!-- <div class="col-lg-12">
                      <img id="profile-img" class="img-circle" height = "200px" width="auto" src="images/ellie.jpg" alt="">
-                    </div>
-                    <div class="intro-text">
-                        <span class="name">Hey, I'm Ellie Day.</span>
-                        <p id="header-intro">I’m making tech inclusive and accessible to all women by educating, collaborating, and coding with women of all backgrounds.</p>
-                    </div>
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <a href="#" class="btn btn-lg btn-outline">
-                            <i class="fa fa-email"></i> Connect with me
-                        </a>
-                    </div>
+                </div> -->
+                <div class="intro-text">
+                    <span class="name">Hey, I'm Ellie Day.</span>
+                    <p id="header-intro">I’m making tech inclusive and accessible to all women through education, collaboration, and code.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="#portfolio" target="_self" class="btn btn-lg btn-outline">
+                        <i class="fa fa-email"></i> See what I'm working on
+                    </a>
                 </div>
             </div>
         </div>
@@ -81,52 +85,79 @@
 
     <div ng-include="'views/modal_icons.html'" ng-controller="ModalIconCtrl"></div>
 
-
-    <!-- About Section -->
+        <!-- About Section -->
     <section class="success" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>About</h2>
+                    <h2>My Mission</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 about">
-                <p>I’m making tech inclusive and accessible to all women by educating, collaborating, and coding with women of all backgrounds. By mentoring and teaching under-served women and fostering honest conversations about diversity in tech, I am dedicated towards creating a trans-inclusive community in tech.</p>
+                    <p>I’m making tech inclusive and accessible to all women through education, collaboration, and code. By teaching and collaborating with under-served women and fostering honest conversations about diversity, I am dedicated towards creating a trans-inclusive tech community for women. </p>
+                </div>
             </div>
         </div>
     </section>
+    <section id="posts">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center posts-title">
+                    <h2>Latest Posts</h2>
+                
+                </div>
+                <hr>
+            </div>
+            <div ng-repeat="post in posts" class="row container">
+                <div class="col-lg-8 col-lg-offset-2 post">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <h3>{{post.title}}</h3>
+                            </div>
+                            <p>{{post.subtitle}}</p>
+                            <h3><a target="_blank" href="{{post.url}}">Read More</a></h3>
+                        </div>
+                </div>
+            </div>
+        </div>
+</section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <!-- <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Lets Chat!</h2>
+                    <h2>Let's Chat!</h2>
                 </div>
             </div>
             <div class="row sendMessage">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form ng-submit="submitRegistration(registrationForm)" role="form" ng-init="registrationForm = {}">
+                    <form ng-submit="submitContact()" role="form">
                         <div class="row control-group">
                           <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <input type="text" name="first_name" ng-model="registrationForm.first_name" required="required" class="form-control" placeholder="First Name"/>
+                            <input type="text" name="first_name" ng-model="first_name" required="required" class="form-control" placeholder="First Name"/>
                           </div>
                         </div>
                           <div class="row control-group">
                           <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Last Name</label>
-                            <input type="text" name="last_name" ng-model="registrationForm.last_name" required="required" class="form-control" placeholder="Last Name"/>
+                            <input type="text" name="last_name" ng-model="last_name" required="required" class="form-control" placeholder="Last Name"/>
                           </div>
                           </div>
                           <div class="row control-group">
                           <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>email</label>
-                            <input type="email" name="email" ng-model="registrationForm.email" required="required" class="form-control" placeholder="Email"/>
+                            <input type="email" name="email" ng-model="email" required="required" class="form-control" placeholder="Email"/>
                           </div>
                           </div>
+                          <div class="row control-group">
+                          <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Message</label>
+                                <textarea rows="5" class="form-control" placeholder="Message" ng-model="message" id="message" required="" data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            </div>
                           <div class="row">
                             <div class="form-group col-xs-12 submit">
 
@@ -138,7 +169,7 @@
             </div>
             <div class="thanks" style="text-align:center;"><h3>Thank you for contacting me. We will be in touch!</h3></div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer class="text-center">
@@ -150,8 +181,8 @@
                         <p>coder. maker. very cool.</p>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>Chicago, IL</p>
+                        <h3>email me</h3>
+                        <p>heyellieday (at) gmail</p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
@@ -174,7 +205,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; 2014 - Ellie Day
+                        Copyright &copy; 2015 - Ellie Day
                     </div>
                 </div>
             </div>
@@ -203,7 +234,7 @@
        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
+       ga('create', 'UA-57394027-1');
        ga('send', 'pageview');
     </script>
 
@@ -231,8 +262,6 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/ng-token-auth/dist/ng-token-auth.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -245,8 +274,6 @@
         <script src="scripts/controllers/modal_icon.js"></script>
         <script src="scripts/vendor/classie.js"></script>
         <script src="scripts/vendor/cbpAnimatedHeader.js"></script>
-        <script src="scripts/vendor/jqBootstrapValidation.js"></script>
-        <script src="scripts/vendor/contact_me.js"></script>
         <script src="scripts/vendor/freelancer.js"></script>
         <!-- endbuild -->
 </body>

@@ -394,7 +394,7 @@ footer .footer-below {
 
 .portfolio-modal .modal-content {
     padding: 100px 0;
-    min-height: 100%;
+    min-height: 50%;
     border: 0;
     border-radius: 0;
     text-align: center;
@@ -449,6 +449,10 @@ footer .footer-below {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+}
+.cover {
+  height:50%;
+  width:100%;
 }
 
 /*!
@@ -2038,10 +2042,14 @@ color: white;
   color:#f49ac1;
 }
 
+#posts h2{
+  color:#f49ac1;
+}
+
 header {
     text-align: center;
     color: #fff;
-    background:url('../images/womenofcodehome.jpg') no-repeat center center fixed;
+    background:url('../images/background-heyellieday.jpg') no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2050,6 +2058,11 @@ header {
 
 #about{
   background-color:#f49ac1;
+   background:url('../images/mission-background.jpg') no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #header-intro{
@@ -2114,4 +2127,21 @@ display: table;
 }
 }
 
-    
+.navbar-default .navbar-toggle .icon-bar{
+  border-color:transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+background-color: white;
+}
+
+.post { border-top: 1px solid #eeeeee; padding-bottom: 10px;}
+
+body {
+  font-family: 'Oxygen', serif;
+}
+
+.list-inline {
+  margin-top: -20px;
+  margin-left: -5px;
+}
