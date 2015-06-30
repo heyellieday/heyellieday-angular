@@ -1,4 +1,4 @@
-ellie.codes
+heyellieday-angular
 ===========
 
-Personal site built with angularjs and other fun stuff to be determined.
+Personal brand site. Uses a Bootstrap starter them with some custom HTML & CSS. Utilizes some AngularJS for the loading of Posts and Portfolio objects.
